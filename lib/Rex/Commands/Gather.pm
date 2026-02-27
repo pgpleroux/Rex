@@ -23,19 +23,18 @@ All these functions will not be reported. These functions don't modify anything.
 
 =cut
 
-## use critic
-
 package Rex::Commands::Gather;
 
 use v5.14.4;
 use warnings;
+use strict;
 
 our $VERSION = '9999.99.99_99'; # VERSION
 
 use Data::Dumper;
 use Rex::Hardware;
 use Rex::Hardware::Host;
-use Rex::Hardware::Network;
+#use Rex::Hardware::Network;
 use Rex::Hardware::Memory;
 use Rex::Helper::System;
 use Rex::Commands;
@@ -43,9 +42,9 @@ use Rex::Commands;
 require Rex::Exporter;
 use base qw(Rex::Exporter);
 
-use vars qw(@EXPORT_OK);
+use vars qw(@EXPORT);
 
-@EXPORT_OK = qw(operating_system_is network_interfaces memory
+@EXPORT = qw(operating_system_is network_interfaces memory
   get_operating_system operating_system operating_system_version operating_system_release
   is_freebsd is_netbsd is_openbsd is_redhat is_linux is_bsd is_solaris is_suse is_debian is_mageia is_windows is_alt is_openwrt is_gentoo is_fedora is_arch is_void
   get_system_information dump_system_information kernelname is_alpine);
