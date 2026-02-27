@@ -52,12 +52,12 @@ file(
 );
 
 my %stats = Rex::Commands::Fs::stat($filename);
-#pgpif ( is_windows() && $^O ne "cygwin" ) {
-#pgp  is( $stats{mode}, "0666", "windows without chmod" );
-#pgp}
-#pgpelse {
+if ( is_windows() && $^O ne "cygwin" ) {
+  is( $stats{mode}, "0666", "windows without chmod" );
+}
+else {
   is( $stats{mode}, "0777", "fs chmod ok" );
-#pgp}
+}
 
 my $changed = 0;
 my $content = cat($filename);
