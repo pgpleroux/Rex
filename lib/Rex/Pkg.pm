@@ -77,7 +77,7 @@ sub get {
   #
   #}
   if ( !Class::Load::is_class_loaded($class) ) {
-    Rex::Logger::info("OS ($operatingsystem) not supported");
+    Rex::Logger::info("OS ($host->{operatingsystem}) not supported");
     exit 1;
   }
 

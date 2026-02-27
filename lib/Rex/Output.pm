@@ -6,11 +6,13 @@ package Rex::Output;
 
 use v5.14.4;
 use warnings;
+use strict;
+use IPC::Shareable;
 
 my $handle;
 use vars qw($output_object);
 
-BEGIN { IPC::Shareable->use; }
+#BEGIN { IPC::Shareable->use; }
 END   { IPC::Shareable->clean_up_all; }
 
 use base 'Rex::Output::Base';
