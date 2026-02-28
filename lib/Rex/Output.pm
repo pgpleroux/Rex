@@ -13,7 +13,7 @@ my $handle;
 use vars qw($output_object);
 
 #BEGIN { IPC::Shareable->use; }
-END   { IPC::Shareable->clean_up_all; }
+END { IPC::Shareable->clean_up_all; }
 
 use base 'Rex::Output::Base';
 

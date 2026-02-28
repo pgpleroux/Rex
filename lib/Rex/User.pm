@@ -16,19 +16,19 @@ use Rex::Logger;
 sub get {
 
   my $user_o = "Linux";
-  if (is_freebsd()) {
+  if ( is_freebsd() ) {
     $user_o = "FreeBSD";
   }
-  elsif (is_netbsd()) {
+  elsif ( is_netbsd() ) {
     $user_o = "NetBSD";
   }
-  elsif (is_openbsd()) {
+  elsif ( is_openbsd() ) {
     $user_o = "OpenBSD";
   }
   elsif ( operating_system_is("SunOS") ) {
     $user_o = "SunOS";
   }
-  elsif (is_openwrt()) {
+  elsif ( is_openwrt() ) {
     $user_o = "OpenWrt";
   }
 

@@ -34,6 +34,7 @@ our $VERSION = '9999.99.99_99'; # VERSION
 use Data::Dumper;
 use Rex::Hardware;
 use Rex::Hardware::Host;
+
 #use Rex::Hardware::Network;
 use Rex::Hardware::Memory;
 use Rex::Helper::System;

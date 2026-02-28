@@ -119,7 +119,7 @@ sub ps {
   my (@custom) = @_;
   my @list;
 
-  if (is_openwrt()) {
+  if ( is_openwrt() ) {
 
     # openwrt doesn't have ps aux
     @list = i_run( "ps", fail_ok => 1 );
